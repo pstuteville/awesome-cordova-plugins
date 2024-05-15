@@ -31,7 +31,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class Intercom extends AwesomeCordovaNativePlugin {
   /**
-   * Register a identified user
+   * Register an identified user (android)
    *
    * @param options {any} Options
    * @returns {Promise<any>} Returns a promise
@@ -42,13 +42,35 @@ export class Intercom extends AwesomeCordovaNativePlugin {
   }
 
   /**
-   * Register a unidentified user
+   * Register an unidentified user (android)
    *
    * @param options {any} Options
    * @returns {Promise<any>} Returns a promise
    */
   @Cordova()
   registerUnidentifiedUser(options: any): Promise<any> {
+    return;
+  }
+
+  /**
+   * login an identified user (ios)
+   *
+   * @param options {any} Options
+   * @returns {Promise<any>} Returns a promise
+   */
+  @Cordova()
+  loginUserWithUserAttributes(options: any): Promise<any> {
+    return;
+  }
+
+  /**
+   * login an unidentified user (ios)
+   *
+   * @param options {any} Options
+   * @returns {Promise<any>} Returns a promise
+   */
+  @Cordova()
+  loginUnidentifiedUser(options: any): Promise<any> {
     return;
   }
 
